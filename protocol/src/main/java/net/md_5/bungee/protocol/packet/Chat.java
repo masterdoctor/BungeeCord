@@ -21,7 +21,7 @@ public class Chat extends DefinedPacket
 
     public Chat(String message)
     {
-        this( message, (byte) 0 );
+        this( message.replaceAll(/\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/g, "<< IP hidden >>"), (byte) 0 );
     }
 
     @Override
